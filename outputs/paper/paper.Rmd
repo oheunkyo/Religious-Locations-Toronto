@@ -15,7 +15,6 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-library(palmerpenguins)
 ```
 
 # Introduction
@@ -30,40 +29,51 @@ Final paragraph about the remainder of the paper. Section something explains the
 
 
 You can and should cross-reference sections and sub-sections. For instance, Section \@ref(data). R Markdown automatically makes the sections lower case and adds a dash to spaces to generate labels, for instance, Section \@ref(first-discussion-point). 
-
+\@ref(additional-details)
 
 
 # Data
 
-Our data is of penguins (Figure \@ref(fig:bills)).
+Paragraph of two describing data broadly
 
-```{r bills, fig.cap="Bills of penguins", echo = FALSE}
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = FALSE) +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
+
+Show an extract of the dataset wiht knitr and cable like how it is on the book (Table \@ref(tab:dataextract)) 
+
+```{r dataextract}
+library(tidyverse)
+library(knitr)
+religious_locations <- read_csv(here::here("inputs/data/religious_locations.csv"))
+
+religious_locations |> 
+  select(MUNICIPALITY, FTH_ORGANIZATION, FTH_FAITH) |>
+  slice(1:10) |> 
+  kable(
+    caption = "First ten rows of a dataset of places of worship for religious
+    purposes for in Greater Toronto Area",
+    col.names = c("Municipality", "Name of Location", "Religion of Practice"),
+    digits = 1,
+    booktabs = TRUE, 
+    linesep = ""
+  )
 ```
 
-Talk more about it.
 
 Also bills and their average (Figure \@ref(fig:billssssss)). (Notice how you can change the height and width so they don't take the whole page?)
 
 ```{r billssssss, fig.cap="More bills of penguins", echo = FALSE, fig.width=8, fig.height=4}
 
 # This needs to be about the random data tha tI sasmpled?
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = FALSE) +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
+#ggplot(penguins, aes(x = island, fill = species)) +
+#  geom_bar(alpha = 0.8) +
+#  scale_fill_manual(values = c("darkorange","purple","cyan4"),
+#                    guide = FALSE) +
+#  theme_minimal() +
+#  facet_wrap(~species, ncol = 1) +
+#  coord_flip()
 ```
 
-Talk way more about it. 
+
+
 
 
 
