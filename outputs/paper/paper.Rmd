@@ -34,7 +34,7 @@ You can and should cross-reference sections and sub-sections. For instance, Sect
 
 # Data
 
-Paragraph of two describing data broadly
+Paragraph or two describing data broadly. We obtain our dataset from the City of Toronto open dAta Portal, using the `opendatatoronto` package [@citeopendatatoronto] and the statistical programming language R [@citeR]
 
 
 Show an extract of the dataset wiht knitr and cable like how it is on the book (Table \@ref(tab:dataextract)) 
@@ -56,6 +56,12 @@ religious_locations |>
     linesep = ""
   )
 ```
+
+Paragraph or two more bout Table \@ref(tab:dataextract)
+
+We are interested in the relationship of each religion
+
+Maybe also on religious location per capita for each municipality
 
 
 Also bills and their average (Figure \@ref(fig:billssssss)). (Notice how you can change the height and width so they don't take the whole page?)

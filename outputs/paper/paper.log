@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.28)  4 FEB 2022 02:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.28)  5 FEB 2022 22:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -491,7 +491,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 145.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 145.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 171.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 166.
 (c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
@@ -502,7 +502,7 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 217.
 
-LaTeX Warning: Reference `fig:billssssss' on page 2 undefined on input line 235.
+LaTeX Warning: Reference `fig:billssssss' on page 2 undefined on input line 241.
 
 [2] [3] [4] [5] (./paper.aux)
 
@@ -513,17 +513,17 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  11782 strings out of 480247
- 184283 string characters out of 5894474
- 476171 words of memory out of 5000000
+ 184292 string characters out of 5894474
+ 475171 words of memory out of 5000000
  29485 multiletter control sequences out of 15000+600000
  536193 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,8n,63p,368b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,8n,63p,368b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}<c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on paper.pdf (5 pages, 281649 bytes).
+Output written on paper.pdf (5 pages, 284053 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 154 compressed objects within 2 object streams
+ 195 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
  36 named destinations out of 1000 (max. 500000)
  97 words of extra memory for PDF output out of 10000 (max. 10000000)
 
