@@ -6,7 +6,9 @@ thanks: "Code and data are available at: https://github.com/oheunkyo/paper1."
 date: "`r format(Sys.time(), '%d %B %Y')`"
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
 output:
-  bookdown::pdf_document2
+  bookdown::pdf_document2:
+    includes:  
+        in_header: preamble-latex.tex
 toc: FALSE
 bibliography: references.bib
 ---
@@ -39,13 +41,50 @@ Paragraph or two describing data broadly. We obtain our dataset from the City of
 
 Show an extract of the dataset wiht knitr and cable like how it is on the book (Table \@ref(tab:dataextract)) 
 
-```{r dataextract}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+```{r dataextract, echo=FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(knitr)
+library(dplyr)
+
+# Read in the csv
 religious_locations <- read_csv(here::here("inputs/data/religious_locations.csv"))
 
+# Rename column name to RELIGION
+religious_locations <- 
+  religious_locations |>
+  rename(
+    RELIGION = FTH_FAITH,
+  ) |>
+  
+  # Change the municipality Former Toronto to Toronto
+  mutate(
+    MUNICIPALITY =
+      recode(
+        MUNICIPALITY,
+        'former TORONTO' = 'TORONTO'
+      )
+  ) |>
+  
+  # Change the various Christianity to Christian since the dataset does not differentiate most Christianity Locations
+  mutate(
+    RELIGION =
+      recode(
+        RELIGION,
+        'Unitarian' = 'Christian',
+        'Orthodox' = 'Christian',
+        'Catholic' = 'Christian'
+      )
+  ) 
+
+# Pick only the necessary columns
+religious_locations <- 
+  religious_locations |>
+  select(MUNICIPALITY, FTH_ORGANIZATION, RELIGION)
+
+# Introduce our data
 religious_locations |> 
-  select(MUNICIPALITY, FTH_ORGANIZATION, FTH_FAITH) |>
   slice(1:10) |> 
   kable(
     caption = "First ten rows of a dataset of places of worship for religious
@@ -54,7 +93,7 @@ religious_locations |>
     digits = 1,
     booktabs = TRUE, 
     linesep = ""
-  )
+  ) 
 ```
 
 Paragraph or two more bout Table \@ref(tab:dataextract)
@@ -63,38 +102,80 @@ We are interested in the relationship of each religion
 
 Maybe also on religious location per capita for each municipality
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-Also bills and their average (Figure \@ref(fig:billssssss)). (Notice how you can change the height and width so they don't take the whole page?)
 
-```{r billssssss, fig.cap="More bills of penguins", echo = FALSE, fig.width=8, fig.height=4}
 
-# This needs to be about the random data tha tI sasmpled?
-#ggplot(penguins, aes(x = island, fill = species)) +
-#  geom_bar(alpha = 0.8) +
-#  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-#                    guide = FALSE) +
-#  theme_minimal() +
-#  facet_wrap(~species, ncol = 1) +
-#  coord_flip()
+
+```{r locationsbyreligion, fig.cap="Number of Religious Locations for Each Religion", echo = FALSE}
+religious_locations |> 
+  ggplot(aes(x = RELIGION)) +
+  geom_bar(fill='#255DDE') + # fill with blue
+  theme_minimal() + 
+  coord_flip() + 
+  labs(x = "Religion of Practice",
+       y = "Number of Religious Locations")
 ```
 
 
 
 
 
+We will only focus the top 5 most common
 
-# Model
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\begin{equation}
-Pr(\theta | y) = \frac{Pr(y | \theta) Pr(\theta)}{Pr(y)}  (\#eq:bayes)
-\end{equation}
 
-Equation \@ref(eq:bayes) seems useful, eh?
 
-Here's a dumb example of how to use some references: In paper we run our analysis in `R` [@citeR]. We also use the `tidyverse` which was written by @thereferencecanbewhatever If we were interested in baseball data then @citeLahman could be useful. 
 
-We can use maths by including latex between dollar signs, for instance $\theta$.
+```{r municipalitybyreligion, fig.cap="Number of Religious Locations for Each Religion in Each Municipality", echo = FALSE}
+top_religions <- c("Christian", "Buddhist", "Hindu", "Jewish", "Muslim")
+filtered_religious_locations <- religious_locations[which(religious_locations$RELIGION %in% top_religions), ]
 
+filtered_religious_locations |> 
+  ggplot(aes(x = MUNICIPALITY, fill = RELIGION)) +
+  geom_bar(position = position_dodge2(width = 1, preserve = "single")) +
+  theme_minimal() + 
+  coord_flip() + 
+  labs(x = "Religion of Practice",
+       y = "Number of Religious Locations") +
+  scale_fill_brewer(palette = "Dark2")
+```
+
+
+
+sdsdasdasdasdasdasda
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+```{r religiousproportion, echo=FALSE, warning=FALSE, message=FALSE}
+# making a new data to find proportions of people per location
+summary_religious_locations <- 
+  filtered_religious_locations |> 
+    group_by(RELIGION) |> 
+    count() |>
+    # Adding number of religious population for each religion
+    cbind(religious_population = c(68885,1394210,145035,98690,212345)) |> 
+    # Finding the proportion of people per location
+    mutate(proportion = round(religious_population/n))
+
+# Creating a table 
+summary_religious_locations |>
+    kable(
+      caption = "Proportion of Religious People per Religious Location in Toronto",
+      col.names = c("Religion of Practice", "Number of Locations", "Toronto Religious Population", 
+                    "Population per Location"),
+      digits = 1,
+      booktabs = TRUE, 
+      linesep = ""
+    )
+```
+
+comparing 2011 census (the most recent containing religious questions) 
+
+https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/details/page.cfm?Lang=E&Geo1=CSD&Code1=3520005&Data=Count&SearchText=toronto&SearchType=Begins&SearchPR=35&A1=Religion&B1=All&Custom=&amp;TABID=1
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 # Results
 
@@ -106,7 +187,13 @@ If my paper were 10 pages, then should be be at least 2.5 pages. The discussion 
 
 ## Second discussion point
 
+High jewish population in north york and toronto
+
+https://en.wikipedia.org/wiki/History_of_the_Jews_in_Toronto
+
 ## Third discussion point
+
+
 
 ## Weaknesses and next steps
 
@@ -126,5 +213,4 @@ Weaknesses and next steps should also be included.
 
 
 # References
-
 
