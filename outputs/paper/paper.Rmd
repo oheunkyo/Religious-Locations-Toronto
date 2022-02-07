@@ -1,5 +1,5 @@
 ---
-title: "Accessibility of Religious Locations of Toronto, and the Abundance of Churches that Triumphs over Other Religions in Accessibility"
+title: "Accessibility of Religious Locations in Toronto, and the Abundance of Churches that Triumphs over Other Religions in Accessibility"
 author: 
   - Eunkyo Oh
 thanks: "Code and data are available at: https://github.com/oheunkyo/Religious-Locations-Toronto"
