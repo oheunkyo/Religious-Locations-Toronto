@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.6)  6 FEB 2022 22:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.6)  6 FEB 2022 23:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -483,64 +483,62 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 113.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 113.
-
-LaTeX Warning: Reference `first-discussion-point' on page 1 undefined on input line 126.
-
-
-LaTeX Warning: Reference `additional-details' on page 1 undefined on input line 127.
-
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 132.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 127.
 (c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
 
 {c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 141.
-<paper_files/figure-latex/locationsbyreligion-1.pdf, id=58, 469.755pt x 325.215pt>
+(Font)              <7> on input line 136.
+<paper_files/figure-latex/locationsbyreligion-1.pdf, id=61, 469.755pt x 325.215pt>
 File: paper_files/figure-latex/locationsbyreligion-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/locationsbyreligion-1.pdf>
-Package pdftex.def Info: paper_files/figure-latex/locationsbyreligion-1.pdf  used on input line 163.
+Package pdftex.def Info: paper_files/figure-latex/locationsbyreligion-1.pdf  used on input line 158.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 [2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.166 
+l.161 
       ] [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.170 
+l.165 
        <./paper_files/figure-latex/locationsbyreligion-1.pdf>]
-<paper_files/figure-latex/municipalitybyreligion-1.pdf, id=79, 469.755pt x 325.215pt>
+<paper_files/figure-latex/municipalitybyreligion-1.pdf, id=82, 469.755pt x 325.215pt>
 File: paper_files/figure-latex/municipalitybyreligion-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/municipalitybyreligion-1.pdf>
-Package pdftex.def Info: paper_files/figure-latex/municipalitybyreligion-1.pdf  used on input line 173.
+Package pdftex.def Info: paper_files/figure-latex/municipalitybyreligion-1.pdf  used on input line 168.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 [4pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.198 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+l.189 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.198 
-       <./paper_files/figure-latex/municipalitybyreligion-1.pdf>] [5]
-Underfull \hbox (badness 2359) in paragraph at lines 234--236
+l.189 \newpage
+               <./paper_files/figure-latex/municipalitybyreligion-1.pdf>]
+
+LaTeX Warning: Reference `jewish-population' on page 5 undefined on input line 214.
+
+[5]
+Underfull \hbox (badness 2359) in paragraph at lines 227--229
 \T1/lmr/m/it/10 tional House-hold Sur-vey (NHS) Pro-file, 2011\T1/lmr/m/n/10 . []$https : / / www12 . statcan . gc . ca / nhs -[] enm / 2011 / dp -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
+Underfull \hbox (badness 10000) in paragraph at lines 227--229
 \T1/lmr/m/n/10 pd / prof / details / page . cfm ? Lang = E & amp ; Geo1 = CSD & amp ; Code1 = 3520005 & amp ; Data = Count & amp ;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
+Underfull \hbox (badness 10000) in paragraph at lines 227--229
 \T1/lmr/m/n/10 SearchText = toronto & amp ; SearchType = Begins & amp ; SearchPR = 35 & amp ; A1 = Religion & amp ; B1 = All &
  []
 
 
-Underfull \hbox (badness 1215) in paragraph at lines 237--239
+Underfull \hbox (badness 1215) in paragraph at lines 230--232
 \T1/lmr/m/n/10 Toronto. []$https : / / medium . com / open -[] data -[] toronto / towards -[] a -[] data -[] quality -[] score -[] in -[] open -[] data -[] part -[] 1 -[]
  []
 
@@ -549,21 +547,21 @@ Underfull \hbox (badness 1215) in paragraph at lines 237--239
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 1540BF77FF40B890ABDF32F7E6CF635C;1062.
+(rerunfilecheck)             Checksum: CE90A1D9BD40352DEDFBDF98D06A0755;1135.
  ) 
 Here is how much of TeX's memory you used:
- 11368 strings out of 480238
- 178278 string characters out of 5894272
- 468871 words of memory out of 5000000
- 29078 multiletter control sequences out of 15000+600000
+ 11366 strings out of 480238
+ 178266 string characters out of 5894272
+ 470106 words of memory out of 5000000
+ 29076 multiletter control sequences out of 15000+600000
  538867 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,8n,63p,1678b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,8n,63p,1678b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}<c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/dalgo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on paper.pdf (6 pages, 327466 bytes).
+Output written on paper.pdf (6 pages, 329188 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
+ 209 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
  39 named destinations out of 1000 (max. 500000)
  75 words of extra memory for PDF output out of 10000 (max. 10000000)
 

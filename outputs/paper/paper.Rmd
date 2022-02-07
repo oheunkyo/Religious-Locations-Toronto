@@ -1,8 +1,8 @@
 ---
-title: "Accessibility of Religious Locations of Toronto, and the Abundance of Churches"
+title: "Accessibility of Religious Locations of Toronto, and the Abundance of Churches that Triumphs over Other Religions in Accessibility"
 author: 
   - Eunkyo Oh
-thanks: "Code and data are available at: https://github.com/oheunkyo/paper1."
+thanks: "Code and data are available at: https://github.com/oheunkyo/Religious-Locations-Toronto"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 abstract: "More than two million Toronto residents are religious, and most religions require central locations for rituals. In this paper, we gather data of places of worship and show which religion has the most accessible establishments in comparison to its population. From the data at Open Data Toronto, we manipulate the data to show that Christian establishments were the most accessible in various levels. This may be because of the high number of Christian population and their religious values."
 output:
@@ -22,22 +22,16 @@ library(tidyverse)
 
 # Introduction
 
-About 76% of Toronto residents have claimed to be religious, and 54% are Christian [@citereligioncensus]. In each religion, they have their own place of worship where the practitioners of the religion can come pray, listen to services, perform rituals, and follow ceremonies. Those establishments are in various areas of Toronto and we will perform various analyses to derive a result suggesting which religious locations are the most accessible to the general public. This paper attempted to formulate multiple procedures in achieving the desired outcome. First, we observed the abundance of each religious locations in Toronto. Then, we compared the results against population to see the availability of the places. Lastly, we analyzed locations in each municipality to find any discrepancies between the districts. Throughout the analyses, we concluded that Christian churches were the most accessible in many different metrics. 
+About 76% of Toronto residents have claimed to be religious, and 54% are Christian [@citereligioncensus]. In each religion, they have their own place of worship where the practitioners of the religion can come pray, listen to services, perform rituals, and follow ceremonies. Those establishments are in various areas of Toronto and we will perform various analyses to derive a result suggesting which religious locations are the most accessible to the general public. This paper attempts to formulate multiple procedures in achieving the desired outcome. First, we observe the abundance of each religious locations in Toronto. Then, we compare the results against population to see the availability of the places. Lastly, we analyze locations in each municipality to find any discrepancies between the districts. Throughout the analyses, we concluded that Christian churches were the most accessible in many different metrics including quantity and availability. Continuing work could include procedures that differentiate based on neighborhoods and see if religious communities reside in specific neighborhoods of Toronto.
 
-Third paragph is about  implications (final sentence)
-
-Final paragraph about the remainder of the paper. Section something explains the data section something covbers results....
-
-
-You can and should cross-reference sections and sub-sections. For instance, Section \@ref(data). R Markdown automatically makes the sections lower case and adds a dash to spaces to generate labels, for instance, Section \@ref(first-discussion-point). 
-\@ref(additional-details)
+The remainder of the paper is as follows: Section \@ref(data) performs the analyses using plots and Section \@ref(results) explains the conclusion reached by the data. Following the conclusion there are two discussion points in Section \@ref(high-christian-population-of-toronto) and Section \@ref(jewish-population-along-bathurst-street). Then the paper goes over weaknesses and ideas for next steps in Section \@ref(weaknesses-and-next-steps).
 
 
 # Data
 
 The data we are going to analyze is a list of places of worship in Toronto. The data is organized in respect to its address, religion of practice, latitude, longitude, name, and other variables totaling up to forty five entries. Religious locations in the data include churches, synagogues, temples, mosques, and various other place of worships reported to Toronto government. We obtain our dataset from the City of Toronto Open Data Portal, using the `opendatatoronto` package [@citeopendatatoronto] and the statistical programming language R [@citeR]. We modify and clean our data using packages `tidyverse` [@citetidyverse] and `dplyr` [@citedplyr]. This dataset has been last updated on March 9th, 2020 and it may not correctly represent the current state of the locations. 
 
-After obtaining our data, we reduce the number of variables to only contain the necessary columns. In this paper, we will focus on three columns: municipality, religion of practice, and the name of the location. Name of the location represents the reported title of the establishment. We will use the column `FTH ORGANIZATION` and rename it to `Religion`. In the original dataset, there is a column named `PLACE_NAME` which is identical to `FTH ORGANIZATION` but most of the values were empty. However, although `FTH ORGANIZATION` seemingly had a character limit, where it only contained strings of about 28 characters or less, `PLACE_NAME` contained the full name of the location. In this paper, I opted to use `FTH ORGANIZATION` since it had no omissions of the rows. Municipality represents the six municipalities of Toronto. It includes East York, Etobicoke, North York, Scarborough, York, and former Toronto. I opted to rename `former TORONTO` to `OLD TORONTO` to abide by the conventional naming system. Lastly, religion of practice contains fourteen different categories of religion. Most churches are labelled as 'Christian' without a specification of different denominations and very few have titled themselves as 'Catholic' or 'Orthodox'. We will rename 'Catholic' and 'Orthodox' churches to 'Christian' to reduce the confusion and uncertainty that will arise in our outcomes because of the inadequately specified denominations. This brings our religion column to contain twelve different variables. 
+After obtaining our data, we reduce the number of variables to only contain the necessary columns. In this paper, we will focus on three columns: municipality, religion of practice, and the name of the location. Name of the location represents the reported title of the establishment. We will use the column `FTH ORGANIZATION` and rename it to `Religion`. In the original dataset, there is a column named `PLACE_NAME` which is identical to `FTH ORGANIZATION` but most of the values were empty. However, although `FTH ORGANIZATION` seemingly had a character limit, where it only contained strings of about 28 characters or less, `PLACE_NAME` contained the full name of the location. In this paper, I opt to use `FTH ORGANIZATION` since it had no omissions of the rows. Municipality represents the six municipalities of Toronto. It includes East York, Etobicoke, North York, Scarborough, York, and former Toronto. I decide to rename `former TORONTO` to `OLD TORONTO` to abide by the conventional naming system. Lastly, religion of practice contains fourteen different categories of religion. Most churches are labelled as 'Christian' without a specification of different denominations and very few have titled themselves as 'Catholic' or 'Orthodox'. We will rename 'Catholic' and 'Orthodox' churches to 'Christian' to reduce the confusion and uncertainty that will arise in our outcomes because of the inadequately specified denominations. This brings our religion column to contain twelve different variables. 
 
 ```{r dataextract, echo=FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
@@ -156,24 +150,24 @@ summary_religious_locations |>
     )
 ```
 
+\newpage
+
 # Results
 
-Christian churches seems to be most accessible in all of the different analyses. In pure numeric sense, they have the most amount of locations in Toronto; they have four times the all of other religious establishments combined. In respect to each population, Buddhism triumphs over other religions but it is closely followed by Christianity. In regards to each municipality, again, Christian establishments have the most amount of locations in every district. Other notable discoveries are that Buddhism locations are more frequent in Old Toronto, and there are uniquely high number of Jewish synagogues in North York compared to other municipalities.
+Christian churches seems to be most accessible in all of the different analyses. In pure numeric sense, they have the greatest number of locations in Toronto; they have four times the all of other religious establishments combined. In respect to each population, Buddhism triumphs over other religions but it is closely followed by Christianity. In regards to each municipality, again, Christian establishments have the most amount of locations in every district. Other notable discoveries are that Buddhism locations are more frequent in Old Toronto, and there are uniquely high number of Jewish synagogues in North York compared to other municipalities.
 
 # Discussion
 
 ## High Christian Population of Toronto
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+High accessibility of Christian churches is obvious if one thinks about the Christian population in Toronto. 54% of Toronto population has self-identified as Christians, and out of those 52% is Catholic [@citereligioncensus]. If subcategories of Christianity were well-reported in the dataset, then it is probable that Catholic churches are the most common place of worship in Toronto. 
 
-High christian population
-
-## Jewish Population 
+## Jewish Population Along Bathurst Street
 
 The bar graph displaying each municipality and the number of religious locations within them shows a noticeable quantity of Jewish synagogues in North York. The only other municipalities to have Jewish establishments are Old Toronto and York. This data aligns with the fact that the Jewish population has started their community in Bathurst/Christie area in Downtown, and the rapid population growth has moved them up north following Bathurst street [@citejudaismintoronto].
 
 
-## Weaknesses of  Data and Next Steps
+## Weaknesses and Next Steps
 
 Our data has stopped updating as of March 9th, 2020 and Open Data Toronto has stated in their website that there are no plans of refreshing the data^[https://open.toronto.ca/dataset/places-of-worship/]. This creates an uncertainty that the data might not be up to date and incorrectly represent the current religious locations, resulting in inaccurate data. The collection of data also has problems since it groups all unreported denominations of Christianity into 'Christian' variable. This may cause inaccuracy when trying to analyze different denominations of Christianity. Most of the dataset rows contained many empty columns and is incomplete, and received Bronze for Data Quality Score. Bronze for Data Quality Score in Open Data Toronto indicates that users don't find the data particularly useful, and it may be incomplete or inaccessible^[Score calculation algorithm is found here: https://github.com/open-data-toronto/framework-data-quality] [@citedataqualityarticle]. The low quality of data may have negatively affected our reasoning of the conclusion.
 
