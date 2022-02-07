@@ -1,5 +1,5 @@
 ---
-title: "Accessibility of Religious Locations of Toronto"
+title: "Accessibility of Religious Locations of Toronto, and the Abundance of Churches"
 author: 
   - Eunkyo Oh
 thanks: "Code and data are available at: https://github.com/oheunkyo/paper1."
@@ -172,7 +172,6 @@ High christian population
 
 The bar graph displaying each municipality and the number of religious locations within them shows a noticeable quantity of Jewish synagogues in North York. The only other municipalities to have Jewish establishments are Old Toronto and York. This data aligns with the fact that the Jewish population has started their community in Bathurst/Christie area in Downtown, and the rapid population growth has moved them up north following Bathurst street [@citejudaismintoronto].
 
-https://en.wikipedia.org/wiki/History_of_the_Jews_in_Toronto
 
 ## Weaknesses of  Data and Next Steps
 
